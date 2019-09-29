@@ -62,3 +62,4 @@ find %{buildroot} -name '*.la' -delete
 %{_datadir}/gnome-vpn-properties/libreswan/nm-libreswan-dialog.ui
 %{_datadir}/appdata/network-manager-libreswan.metainfo.xml
 %{_usr}/lib/NetworkManager/VPN/nm-libreswan-service.name
+%{_mandir}/man5/nm-settings-libreswan.5.*
