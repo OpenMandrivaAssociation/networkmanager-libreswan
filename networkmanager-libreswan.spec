@@ -6,7 +6,7 @@
 
 Summary:	NetworkManager VPN integration for LibreSWAN
 Name:		networkmanager-libreswan
-Version:	1.2.10
+Version:	1.2.12
 Release:	1
 License:	GPLv2+
 Group:		System/Base
@@ -20,12 +20,8 @@ BuildRequires:	perl(XML::Parser)
 BuildRequires:	perl
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(gtk+-3.0)
-BuildRequires:	pkgconfig(libnm-util) >= %{nmversion}
 BuildRequires:	pkgconfig(libnma) >= %{nmversion}
-BuildRequires:	pkgconfig(libnm-glib)
-BuildRequires:	pkgconfig(libnm-glib-vpn)
 BuildRequires:	pkgconfig(libnl-3.0)
-BuildRequires:	pkgconfig(libnm-gtk)
 BuildRequires:	pkgconfig(libsecret-unstable)
 Requires:	NetworkManager
 Requires:	shared-mime-info
@@ -41,8 +37,9 @@ with NetworkManager.
 
 %build
 NOCONFIGURE=yes gnome-autogen.sh
-%configure2_5x \
-	--disable-static
+%configure \
+	--disable-static \
+	--without-libnm-glib
 %make_build
 
 %install
@@ -55,7 +52,6 @@ find %{buildroot} -name '*.la' -delete
 %files -f NetworkManager-libreswan.lang
 %doc AUTHORS ChangeLog README
 %config(noreplace) %{_sysconfdir}/dbus-1/system.d/nm-libreswan-service.conf
-%config(noreplace) %{_sysconfdir}/NetworkManager/VPN/nm-libreswan-service.name
 %{_libdir}/NetworkManager/libnm-libreswan-properties.so
 %{_libdir}/NetworkManager/libnm-vpn-plugin-libreswan.so
 %{_libdir}/NetworkManager/libnm-vpn-plugin-libreswan-editor.so
