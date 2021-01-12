@@ -6,7 +6,7 @@
 
 Summary:	NetworkManager VPN integration for LibreSWAN
 Name:		networkmanager-libreswan
-Version:	1.2.12
+Version:	1.2.14
 Release:	1
 License:	GPLv2+
 Group:		System/Base
