@@ -6,7 +6,7 @@
 
 Summary:	NetworkManager VPN integration for LibreSWAN
 Name:		networkmanager-libreswan
-Version:	1.2.14
+Version:	1.2.16
 Release:	1
 License:	GPLv2+
 Group:		System/Base
@@ -20,6 +20,7 @@ BuildRequires:	perl(XML::Parser)
 BuildRequires:	perl
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(gtk4)
 BuildRequires:	pkgconfig(libnma) >= %{nmversion}
 BuildRequires:	pkgconfig(libnl-3.0)
 BuildRequires:	pkgconfig(libsecret-unstable)
@@ -39,7 +40,8 @@ with NetworkManager.
 NOCONFIGURE=yes gnome-autogen.sh
 %configure \
 	--disable-static \
-	--without-libnm-glib
+	--without-libnm-glib \
+	--with-gtk4
 %make_build
 
 %install
