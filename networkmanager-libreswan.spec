@@ -21,6 +21,7 @@ BuildRequires:	perl
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gtk4)
+BuildRequires:	pkgconfig(gio-2.0)
 BuildRequires:	pkgconfig(libnma) >= %{nmversion}
 BuildRequires:	pkgconfig(libnl-3.0)
 BuildRequires:	pkgconfig(libsecret-unstable)
