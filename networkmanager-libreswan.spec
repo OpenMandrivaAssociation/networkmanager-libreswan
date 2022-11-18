@@ -1,6 +1,8 @@
 %define nmversion	%(echo %{version} | cut -d "." -f -2)
 %define url_ver		%(echo %{version}|cut -d. -f1,2)
 
+%define _disable_ld_no_undefined 1
+
 # filter out plugin .so provides
 %global __provides_exclude_from %{_libdir}/NetworkManager/.*\\.so
 
