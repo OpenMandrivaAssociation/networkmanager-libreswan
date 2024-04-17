@@ -55,7 +55,7 @@ find %{buildroot} -name '*.la' -delete
 %find_lang NetworkManager-libreswan
 
 %files -f NetworkManager-libreswan.lang
-%doc AUTHORS ChangeLog README
+%doc AUTHORS README
 %config(noreplace) %{_sysconfdir}/dbus-1/system.d/nm-libreswan-service.conf
 %{_libdir}/NetworkManager/libnm-vpn-plugin-libreswan.so
 %{_libdir}/NetworkManager/libnm-vpn-plugin-libreswan-editor.so
