@@ -14,6 +14,11 @@ License:	GPLv2+
 Group:		System/Base
 URL:		https://wiki.gnome.org/Projects/NetworkManager
 Source0:	https://download.gnome.org/sources/NetworkManager-libreswan/%{url_ver}/NetworkManager-libreswan-%{version}.tar.xz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gettext
 BuildRequires:	gnome-common
 BuildRequires:	intltool
